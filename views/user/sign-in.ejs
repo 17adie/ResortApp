@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+    <script src="/js/bootstrap.min.js"></script>
+  </head>
+  <body class="custom-body">
+    <div class="custom-container">
+      <h2 class="text-center mb-4">Sign In</h2>
+      <%- locals.error_message %>
+      <p class="text-muted custom-back"><a href="/resort" class="text-reset text-decoration-none">← back to main page</a>.</p>
+      <form action="/user/sign-in" method="post">
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input type="text" class="form-control form-control-sm" name="username" />
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control form-control-sm" name="password" />
+        </div>
+        <div class="d-grid gap-2">
+          <button class="btn btn-primary btn-sm" type="submit">Sign In</button>
+        </div>
+        <p class="text-muted mt-3 text-center">Not yet registered? <a href="/user/sign-up" class="text-reset">Signup now</a></p>
+      </form>
+    </div>
+  </body>
+</html>

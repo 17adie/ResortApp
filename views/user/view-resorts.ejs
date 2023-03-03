@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= resort.resort_name %> Details</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+    <script src="/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="custom-container-lg">
+      <h2 class="text-center mb-4">Resort Details</h2>
+      <p class="text-muted custom-back"><a href="/user/profile" class="text-reset text-decoration-none">← back to profile</a>.</p>
+      <div class="card mb-3">
+        <div class="card-body">
+          <h4 class="card-title"><%= resort.resort_name %> </h4>
+          <small class="card-text"><%= resort.resort_address %></small>
+          <br>
+          <small class="text-muted"><strong><%= resort.uploader_username %></strong> • <%= date_posted %> </small>
+            <hr>
+            <p class="text-muted"><%= resort.resort_description %> </p>
+            <h1>MAP HERE..</h1>
+            <h1>REVIEWS HERE..</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="d-grid gap-2 mt-2">
+              <a class="btn btn-sm btn-primary" href="/resort/edit/<%= resort._id %>" role="button">Edit</a>
+            </div>
+          </div>
+          <div class="col">
+            <form action="/resort/<%= resort._id %>?_method=DELETE" method="post">
+              <div class="d-grid gap-2 mt-2">
+                <button class="btn btn-danger btn-sm">Delete</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>

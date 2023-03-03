@@ -1,0 +1,25 @@
+.custom-body {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%230099ff' fill-opacity='2' d='M0 32L24 48C48 64 96 96 144 117.3C192 139 240 149 288 138.7C336 128 384 96 432 112C480 128 528 192 576 229.3C624 267 672 277 720 261.3C768 245 816 203 864 192C912 181 960 203 1008 218.7C1056 235 1104 245 1152 218.7C1200 192 1248 128 1296 101.3C1344 75 1392 85 1416 90.7L1440 96L1440 320L1416 320C1392 320 1344 320 1296 320C1248 320 1200 320 1152 320C1104 320 1056 320 1008 320C960 320 912 320 864 320C816 320 768 320 720 320C672 320 624 320 576 320C528 320 480 320 432 320C384 320 336 320 288 320C240 320 192 320 144 320C96 320 48 320 24 320L0 320Z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.custom-container {
+  margin: auto;
+  max-width: 500px;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+
+.custom-container-lg {
+  margin: auto;
+  max-width: 1000px;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+
+.custom-back {
+  font-size: 11px;
+  margin-bottom: 1.5rem;
+}

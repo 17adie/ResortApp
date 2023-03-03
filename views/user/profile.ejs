@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+    <script src="/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <%- include('../partials/navbar-logged.ejs') %>
+    <div class="container">
+      <div class="d-flex justify-content-between">
+        <h2 class="mt-2">Resorts and Hotels</h2>
+        <div class="align-self-center">
+          <a href="/resort/new" class="btn btn-sm btn-success float-end" type="button">Add New Resort</a>
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 g-4 mb-3"><%- list %></div>
+    </div>
+  </body>
+</html>

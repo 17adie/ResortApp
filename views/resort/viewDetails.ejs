@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= resort.resort_name %> Details</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+    <script src="/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="custom-container-lg">
+      <h2 class="text-center mb-4">Resort Details</h2>
+      <p class="text-muted custom-back"><a href="/resort" class="text-reset text-decoration-none">← back to main page</a>.</p>
+      <div class="card mb-3">
+        <div class="card-body">
+          <h4 class="card-title"><%= resort.resort_name %> </h4>
+          <small class="card-text"><%= resort.resort_address %></small>
+          <br>
+          <small class="text-muted"><strong><%= resort.uploader_username %></strong> • <%= date_posted %> </small>
+            <hr>
+            <p class="text-muted"><%= resort.resort_description %> </p>
+            <h1>MAP HERE..</h1>
+            <h1>REVIEWS HERE..</h1>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>

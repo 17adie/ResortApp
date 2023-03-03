@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+    <script src="/js/bootstrap.min.js"></script>
+  </head>
+  <body class="custom-body">
+    <div class="custom-container">
+      <h2 class="text-center mb-4">Sign Up</h2>
+
+      <%- locals.error_message %>
+
+      <p class="text-muted custom-back"><a href="/resort" class="text-reset text-decoration-none">← back to main page</a>.</p>
+      <form action="/user/sign-up" method="post">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name <small class="text-muted">(required)</small></label>
+          <input type="text" class="form-control form-control-sm" name="name" value="<%= locals.name %>" />
+        </div>
+        <div class="mb-3">
+          <label for="username" class="form-label">Username <small class="text-muted">(required)</small></label>
+          <input type="text" class="form-control form-control-sm" name="username" value="<%= locals.username %>" />
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password <small class="text-muted">(required)</small></label>
+          <input type="password" class="form-control form-control-sm" name="password" value="<%= locals.password %>" />
+        </div>
+        <div class="mb-3">
+          <label for="confirm_password" class="form-label">Confirm Password <small class="text-muted">(required)</small></label>
+          <input type="password" class="form-control form-control-sm" name="confirm_password" value="<%= locals.confirm_password %>" />
+        </div>
+        <div class="d-grid gap-2">
+          <button class="btn btn-primary btn-sm" type="submit">Sign Up</button>
+        </div>
+        <p class="text-muted mt-3 text-center">Already have an account? <a href="/user/sign-in" class="text-reset">Login here</a></p>
+      </form>
+    </div>
+  </body>
+</html>

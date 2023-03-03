@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add New Resort</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+    <script src="/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="custom-container">
+      <h2 class="text-center mb-4">Edit Resort</h2>
+
+      <%- error_message %>
+
+      <p class="text-muted custom-back"><a href="/user/profile" class="text-reset text-decoration-none">← back to profile</a>.</p>
+      <form action="/resort/edit/<%= id %>?_method=PATCH" method="post">
+        <div class="mb-3">
+          <label for="resort_name" class="form-label">Resort Name <small class="text-muted">(required)</small></label>
+          <input type="text" class="form-control form-control-sm" name="resort_name" value="<%= resort.resort_name %>" placeholder="Enter Resort Name" />
+        </div>
+        <div class="mb-3">
+          <label for="resort_description" class="form-label">Description <small class="text-muted">(required)</small></label>
+          <input type="text" class="form-control form-control-sm" name="resort_description" value="<%= resort.resort_description %>" placeholder="Enter Description" />
+        </div>
+        <div class="mb-3">
+          <label for="resort_address" class="form-label">Address <small class="text-muted">(required)</small></label>
+          <input type="text" class="form-control form-control-sm" name="resort_address" value="<%= resort.resort_address %>" placeholder="Enter Address" />
+        </div>
+        <h4>Map Here...</h4>
+        <div class="d-grid gap-2">
+          <button class="btn btn-primary btn-sm">Update</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
